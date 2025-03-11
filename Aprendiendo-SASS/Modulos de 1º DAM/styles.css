@@ -46,36 +46,31 @@ table td {
 }
 table td h1 {
   font-size: 32px;
-  font-weight: normal;
-  color: gray;
 }
 table td h2 {
   font-size: 28px;
-  font-weight: normal;
-  color: gray;
 }
 table td h3 {
-  font-size: 24px;
-  font-weight: normal;
-  color: gray;
+  font-size: 28px;
 }
 table td h4 {
-  font-size: 20px;
-  font-weight: normal;
-  color: gray;
+  font-size: 24px;
 }
 table td h5 {
-  font-size: 18px;
-  font-weight: normal;
-  color: gray;
+  font-size: 20px;
 }
 table td h6 {
   font-size: 16px;
-  font-weight: normal;
-  color: gray;
+}
+table td .derecha {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
 }
 table td .num {
-  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
 }
 
 h2 {

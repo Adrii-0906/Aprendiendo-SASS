@@ -1,14 +1,11 @@
 // variables
+@use "variables" as *;
 
-$color-border: black;
-$color-fila: greenyellow, red, pink, lightskyblue, yellow, dimgray, orange;
-$tamano-h: 32px, 28px, 24px, 20px, 18px, 16px;
-$color-letra: gray;
-$anchobase: 100%;
+// funciones
+@use "funciones" as *;
 
-@function calcularAnchura($a_base,$multiplicador) {
-    @return $a_base * $multiplicador;
-}
+// mixins
+@use "mixins" as *;
 
 body {
     margin: 0;
@@ -17,21 +14,19 @@ body {
 }
 
 div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include bloqueCentral;
 }
 
 table {
-    width: calcularAnchura($anchobase,0.9);
+    width: calcularAnchura($ancho,0.9);
     border: $color-border 2px solid;
     border-collapse: collapse;
 
     tr {
         border-collapse: collapse;
         border: $color-border 2px solid;
-        @each $i in $color-fila {
-            &:nth-child(#{index($color-fila, $i)}) {
+        @each $i in $colores-fila {
+            &:nth-child(#{index($colores-fila, $i)}) {
                 background-color: $i;
             }
         }
@@ -39,15 +34,16 @@ table {
     td {
         border-collapse: collapse;
         border: $color-border 2px solid;
-        @for $i from 1 through length($tamano-h) {
-            h#{$i} {
-                font-size: nth($tamano-h, $i);
-                font-weight: normal;
-                color: $color-letra;
+        @each $tamano, $size in $listTamanosH {
+            #{$tamano} {
+                font-size: $size;
             }
         }
+        .derecha {
+            @include bloqueIzq;
+        }
         .num {
-            text-align: right;
+            @include bloqueDrch;
         }
     }
 }
@@ -58,13 +54,13 @@ h2 {
 
 @media(min-width: 650px) {
     table {
-        width: calcularAnchura($anchobase, 0.7);
+        width: calcularAnchura($ancho, 0.7);
     }
 }
 
 @media(min-width: 850px) {
     table {
-        width: calcularAnchura($anchobase, 0.9);
+        width: calcularAnchura($ancho, 0.9);
     }
 }
 

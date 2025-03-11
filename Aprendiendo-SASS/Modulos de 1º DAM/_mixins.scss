@@ -1,0 +1,19 @@
+// Vamos a crear unos mixin para centrar bloques
+
+@mixin bloqueCentral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bloqueIzq {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+@mixin bloqueDrch {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
