@@ -1,0 +1,34 @@
+
+// Variables
+// Variable del color del borde
+$color-border:  black;
+
+// Variables de los colores de las filas de la tabla
+
+// Primero creamos las variables de los colores
+$greenyellow: greenyellow;
+$red: red;
+$pink: pink;
+$lightskyblue: lightskyblue;
+$yellow: yellow;
+$dimgray: dimgray;
+$orange: orange;
+
+// Ahora vamos a crear una lista con todas las variables de los colores
+$colores-fila:($greenyellow, $red, $pink, $lightskyblue, $yellow, $dimgray, $orange);
+
+// Ahora vamos a crear la lista con los tamanos de los h, desde h1-h6
+$listTamanosH: (
+        h1: 32px,
+        h2: 28px,
+        h3: 28px,
+        h4: 24px,
+        h5: 20px,
+        h6: 16px
+);
+
+// Ahora vamos a crear una variables para guardar el color de la letra que vamos a utilizar
+$color-letra: gray;
+
+// Por ultimo creamos la variable del ancho del width, que vamos a usar para calcular la abchura
+$ancho:100%;

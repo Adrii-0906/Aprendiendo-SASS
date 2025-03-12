@@ -1,0 +1,5 @@
+@use "variables" as *;
+
+@function calcularAnchura($a_base,$multiplicador) {
+  @return $a_base * $multiplicador;
+}
